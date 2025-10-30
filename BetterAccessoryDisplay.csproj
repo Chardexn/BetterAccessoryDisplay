@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <Nullable>enable</Nullable>
+        <!-- 游戏安装根目录 -->
+        <DuckovPath>C:\Program Files (x86)\Steam\steamapps\common\Escape from Duckov</DuckovPath>
+        <!-- Managed 文件夹路径 -->
+        <DuckovManagedPath>$(DuckovPath)\Duckov_Data\Managed</DuckovManagedPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Include="TeamSoda.Duckov.Core">
+            <HintPath>$(DuckovManagedPath)\TeamSoda.Duckov.Core.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="TeamSoda.Duckov.Utilities">
+            <HintPath>$(DuckovManagedPath)\TeamSoda.Duckov.Utilities.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="ItemStatsSystem">
+            <HintPath>$(DuckovManagedPath)\ItemStatsSystem.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine">
+            <HintPath>$(DuckovManagedPath)\UnityEngine.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+            <HintPath>$(DuckovManagedPath)\UnityEngine.CoreModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.UI">
+            <HintPath>$(DuckovManagedPath)\UnityEngine.UI.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.UIModule">
+            <HintPath>$(DuckovManagedPath)\UnityEngine.UIModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="Unity.TextMeshPro">
+            <HintPath>$(DuckovManagedPath)\Unity.TextMeshPro.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Lib.Harmony" Version="2.4.1" />
+    </ItemGroup>
+
+</Project>

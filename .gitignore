@@ -52,3 +52,8 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+BetterAccessoryDisplay.sln.DotSettings.user
+.gitignore
+DuckovModDemo.sln.DotSettings.user
+*.xml
+global.json
