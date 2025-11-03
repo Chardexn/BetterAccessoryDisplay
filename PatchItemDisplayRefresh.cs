@@ -56,7 +56,16 @@ namespace DuckovModDemo
                     var container = slotContainerField.GetValue(__instance) as GameObject;
                     if (container != null && !container.activeSelf)
                     {
-                        container.SetActive(true);
+                        // 未搜索时不显示
+                        if (__instance.Target.NeedInspection)
+                        {
+                            container.SetActive(false);
+                            return;
+                        }
+                        else
+                        {
+                            container.SetActive(true);
+                        }
                         Debug.Log($"[{Constants.MOD_NAME}] Refresh后重新激活插槽容器");
                     }
                 }

@@ -64,7 +64,8 @@ namespace BetterAccessoryDisplay
                         var img = contentIndicatorObj.GetComponent<UnityEngine.UI.Image>();
                         if (img != null)
                         {
-                            img.color = Color.red; // 强制改成红色
+                            // img.color = Color.red; // 强制改色
+                            img.color = Color.gray; // 强制改色
                             Debug.Log($"[{Constants.MOD_NAME}] SlotIndicatorRefresh 已经将新增槽位设置为红色");
                         }
                     }
